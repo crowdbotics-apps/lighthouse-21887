@@ -26,12 +26,7 @@ export default class Blank extends React.Component {
   state = {}
 
   render = () => (
-    <ImageBackground
-      source={{
-        uri:
-          "https://d3tklmlrp1a8c2.cloudfront.net/media/project_component_resources/e1cd984697b5fc0533cbedac8f77dde4.jpg"
-      }}
-    >
+    <ImageBackground>
       <Text>
         The take five method is a grounding exercise that is commonly used for
         anxiety disorders. 1. look around and find five things you can see 2.
@@ -43,8 +38,11 @@ export default class Blank extends React.Component {
     </ImageBackground>
   )
 }
+
 const styles = StyleSheet.create({
   container: { flex: 1, marginHorizontal: 16 },
+  ImageBackground_1: {},
+  Text_2: {},
   ImageBackground_1: {},
   Text_2: {}
 })
