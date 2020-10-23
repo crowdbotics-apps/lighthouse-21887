@@ -26,13 +26,29 @@ export default class Blank extends React.Component {
   state = {}
 
   render = () => (
-    <View>
-      <Button title="suicide hotline" onPress={() => alert("Pressed!")} />
-      <Button title="texting hotline" onPress={() => alert("Pressed!")} />
-      <Button title="LGBTQA+" onPress={() => alert("Pressed!")} />
-      <Button title="self harm" onPress={() => alert("Pressed!")} />
-      <Button title="greif" onPress={() => alert("Pressed!")} />
-    </View>
+    <ImageBackground>
+      <Button
+        title="suicide hotline"
+        color="#e3d79c"
+        onPress={() => alert("Pressed!")}
+      />
+      <Button
+        title="LGBTQA+"
+        color="#e3d79c"
+        onPress={() => alert("Pressed!")}
+      />
+      <Button
+        title="texting hotline"
+        color="#e3d79c"
+        onPress={() => alert("Pressed!")}
+      />
+      <Button
+        title="self harm"
+        color="#e3d79c"
+        onPress={() => alert("Pressed!")}
+      />
+      <Button title="greif" color="#e3d79c" onPress={() => alert("Pressed!")} />
+    </ImageBackground>
   )
 }
 
@@ -41,10 +57,17 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
+
   View_1: {},
   Button_2: {},
   Button_3: {},
   Button_4: {},
+  Button_5: {},
+  Button_6: {},
+  ImageBackground_1: {},
+  Button_2: {},
+  Button_4: {},
+  Button_3: {},
   Button_5: {},
   Button_6: {}
 })
