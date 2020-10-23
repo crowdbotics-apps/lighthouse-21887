@@ -26,8 +26,14 @@ export default class Blank extends React.Component {
   state = { DateTimePicker_6: new Date(""), CheckBox_14: false }
 
   render = () => (
-    <ImageBackground>
+    <ImageBackground
+      source={{
+        uri:
+          "https://d3tklmlrp1a8c2.cloudfront.net/media/project_component_resources/light_house_back.jpg"
+      }}
+    >
       <DateTimePicker
+        showIcon={false}
         date={this.state.DateTimePicker_6}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_6: selectedDate })
@@ -57,7 +63,13 @@ export default class Blank extends React.Component {
       />
       <Button
         title="coping stuff"
+        style={styles.Button_15}
         onPress={() => this.props.navigation.navigate("BlankScreen6158786")}
+      />
+      <Button
+        title="goal setting and time management"
+        style={styles.Button_20}
+        onPress={() => this.props.navigation.navigate("BlankScreen10158790")}
       />
       <Text style={styles.Text_19}>
         check the box below if you are considering self-harm
@@ -146,6 +158,25 @@ const styles = StyleSheet.create({
   Text_18: { alignSelf: "center" },
   Slider_5: { alignSelf: "center" },
   Button_15: {},
+  Text_19: { alignSelf: "center" },
+  CheckBox_14: { borderColor: "#9cc01b", borderStyle: "dotted" },
+  ImageBackground_1: {},
+  DateTimePicker_6: {},
+  Text_16: { alignSelf: "center" },
+  Slider_3: { alignSelf: "center", borderColor: "#002aff" },
+  Text_17: { alignSelf: "center" },
+  Slider_4: { alignSelf: "center" },
+  Text_18: { alignSelf: "center" },
+  Slider_5: { alignSelf: "center" },
+  Button_15: { marginLeft: 8 },
+  Button_20: {
+    marginLeft: 8,
+    marginRight: 8,
+    paddingLeft: 1,
+    paddingRight: -13,
+    overflow: "hidden",
+    alignSelf: "center"
+  },
   Text_19: { alignSelf: "center" },
   CheckBox_14: { borderColor: "#9cc01b", borderStyle: "dotted" }
 })
