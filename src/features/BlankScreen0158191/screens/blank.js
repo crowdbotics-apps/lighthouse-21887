@@ -26,27 +26,42 @@ export default class Blank extends React.Component {
   state = { DateTimePicker_6: new Date(""), CheckBox_14: false }
 
   render = () => (
-    <ImageBackground
-      source={{
-        uri:
-          "https://d3tklmlrp1a8c2.cloudfront.net/media/project_component_resources/light_house_back.jpg"
-      }}
-    >
+    <ImageBackground>
       <DateTimePicker
-        showIcon={false}
         date={this.state.DateTimePicker_6}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_6: selectedDate })
         }
       />
+      <Text style={styles.Text_16}>depresson- manic</Text>
       <Slider
         value={50}
         minimumValue={0}
         maximumValue={100}
+        maximumTrackTintColor="#004cff"
         style={styles.Slider_3}
       />
-      <Slider value={50} minimumValue={0} maximumValue={100} />
-      <Slider value={50} minimumValue={0} maximumValue={100} />
+      <Text style={styles.Text_17}>mood</Text>
+      <Slider
+        value={50}
+        minimumValue={0}
+        maximumValue={100}
+        style={styles.Slider_4}
+      />
+      <Text style={styles.Text_18}>anxiety</Text>
+      <Slider
+        value={50}
+        minimumValue={0}
+        maximumValue={100}
+        style={styles.Slider_5}
+      />
+      <Button
+        title="coping stuff"
+        onPress={() => this.props.navigation.navigate("BlankScreen6158786")}
+      />
+      <Text style={styles.Text_19}>
+        check the box below if you are considering self-harm
+      </Text>
       <TouchableOpacity
         onPress={() => this.props.navigation.navigate("BlankScreen2158265")}
       >
@@ -57,10 +72,6 @@ export default class Blank extends React.Component {
           onPress={nextChecked => this.setState({ CheckBox_14: nextChecked })}
         />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => this.props.navigation.navigate("")}>
-        <Icon name="star" />
-      </TouchableOpacity>
-      <Icon name="star" />
     </ImageBackground>
   )
 }
@@ -125,5 +136,16 @@ const styles = StyleSheet.create({
   Slider_5: {},
   CheckBox_14: { borderColor: "#9cc01b", borderStyle: "dotted" },
   Icon_10: {},
-  Icon_12: {}
+  Icon_12: {},
+  ImageBackground_1: {},
+  DateTimePicker_6: {},
+  Text_16: { alignSelf: "center" },
+  Slider_3: { alignSelf: "center", borderColor: "#002aff" },
+  Text_17: { alignSelf: "center" },
+  Slider_4: { alignSelf: "center" },
+  Text_18: { alignSelf: "center" },
+  Slider_5: { alignSelf: "center" },
+  Button_15: {},
+  Text_19: { alignSelf: "center" },
+  CheckBox_14: { borderColor: "#9cc01b", borderStyle: "dotted" }
 })
