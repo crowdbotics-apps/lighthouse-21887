@@ -28,6 +28,7 @@ export default class Blank extends React.Component {
   render = () => (
     <ImageBackground>
       <DateTimePicker
+        showIcon={false}
         date={this.state.DateTimePicker_6}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_6: selectedDate })
@@ -51,10 +52,14 @@ export default class Blank extends React.Component {
           onPress={nextChecked => this.setState({ CheckBox_14: nextChecked })}
         />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => this.props.navigation.navigate("")}>
-        <Icon name="star" />
-      </TouchableOpacity>
-      <Icon name="star" />
+      <Button title="goal setting" onPress={() => alert("Pressed!")} />
+      <Button title="copying mechanisms" onPress={() => alert("Pressed!")} />
+      <Button
+        title="coping stuff"
+        color="#3366FF"
+        style={styles.Button_17}
+        onPress={() => alert("Pressed!")}
+      />
     </ImageBackground>
   )
 }
@@ -102,5 +107,14 @@ const styles = StyleSheet.create({
   Slider_5: {},
   CheckBox_14: { borderColor: "#9cc01b", borderStyle: "dotted" },
   Icon_10: {},
-  Icon_12: {}
+  Icon_12: {},
+  ImageBackground_1: {},
+  DateTimePicker_6: {},
+  Slider_3: { alignSelf: "flex-start", borderColor: "#002aff" },
+  Slider_4: {},
+  Slider_5: {},
+  CheckBox_14: { borderColor: "#9cc01b", borderStyle: "dotted" },
+  Button_15: {},
+  Button_16: {},
+  Button_17: { width: "100%", textAlign: "center" }
 })
