@@ -29,21 +29,29 @@ export default class Blank extends React.Component {
     <View>
       <TextInput
         placeholder="how are you feeling"
+        multiline={true}
         style={styles.TextInput_2}
         value={this.state.TextInput_2}
         onChangeText={nextValue => this.setState({ TextInput_2: nextValue })}
       />
-      <CheckBox
-        title="i feel suicidal"
-        disabled={false}
-        checked={this.state.CheckBox_3}
-        onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
-      />
-      <CheckBox
-        title="i still want to self harm"
-        checked={this.state.CheckBox_4}
-        onPress={nextChecked => this.setState({ CheckBox_4: nextChecked })}
-      />
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("BlankScreen3158440")}
+      >
+        <CheckBox
+          title="i feel suicidal"
+          checked={this.state.CheckBox_3}
+          onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
+        />
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("BlankScreen3158440")}
+      >
+        <CheckBox
+          title="i still want to self harm"
+          checked={this.state.CheckBox_4}
+          onPress={nextChecked => this.setState({ CheckBox_4: nextChecked })}
+        />
+      </TouchableOpacity>
     </View>
   )
 }
@@ -57,6 +65,10 @@ const styles = StyleSheet.create({
   View_1: {},
   TextInput_2: {},
   CheckBox_3: {},
+  View_1: {},
+  TextInput_2: { height: 100 },
+  CheckBox_3: {},
+  CheckBox_4: {},
   View_1: {},
   TextInput_2: { height: 100 },
   CheckBox_3: {},
