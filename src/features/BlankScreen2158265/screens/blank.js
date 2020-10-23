@@ -23,21 +23,26 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { TextInput_2: "", CheckBox_3: true }
+  state = { TextInput_2: "", CheckBox_3: false, CheckBox_4: false }
 
   render = () => (
     <View>
       <TextInput
         placeholder="how are you feeling"
-        multiline={true}
+        style={styles.TextInput_2}
         value={this.state.TextInput_2}
         onChangeText={nextValue => this.setState({ TextInput_2: nextValue })}
       />
       <CheckBox
         title="i feel suicidal"
-        disabled={true}
+        disabled={false}
         checked={this.state.CheckBox_3}
         onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
+      />
+      <CheckBox
+        title="i still want to self harm"
+        checked={this.state.CheckBox_4}
+        onPress={nextChecked => this.setState({ CheckBox_4: nextChecked })}
       />
     </View>
   )
@@ -48,7 +53,12 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
+
   View_1: {},
   TextInput_2: {},
-  CheckBox_3: {}
+  CheckBox_3: {},
+  View_1: {},
+  TextInput_2: { height: 100 },
+  CheckBox_3: {},
+  CheckBox_4: {}
 })
