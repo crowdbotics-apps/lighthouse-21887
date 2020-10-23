@@ -28,7 +28,6 @@ export default class Blank extends React.Component {
   render = () => (
     <View>
       <DateTimePicker
-        showIcon={false}
         date={this.state.DateTimePicker_6}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_6: selectedDate })
@@ -50,6 +49,14 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
+
+  View_1: {},
+  DateTimePicker_6: {},
+  Slider_3: {},
+  Slider_4: {},
+  Slider_5: {},
+  Icon_10: {},
+  Icon_12: {},
   View_1: {},
   DateTimePicker_6: {},
   Slider_3: {},
