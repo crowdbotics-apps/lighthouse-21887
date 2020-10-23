@@ -26,12 +26,7 @@ export default class Blank extends React.Component {
   state = { DateTimePicker_6: new Date(""), CheckBox_14: false }
 
   render = () => (
-    <ImageBackground
-      source={{
-        uri:
-          "https://d3tklmlrp1a8c2.cloudfront.net/media/project_component_resources/9c990746c523247d92fd3d09bedbf37b.png"
-      }}
-    >
+    <ImageBackground>
       <DateTimePicker
         date={this.state.DateTimePicker_6}
         onDateChange={selectedDate =>
@@ -98,6 +93,14 @@ const styles = StyleSheet.create({
   Slider_4: {},
   Slider_5: {},
   CheckBox_14: { borderColor: "#9cc01b" },
+  Icon_10: {},
+  Icon_12: {},
+  ImageBackground_1: {},
+  DateTimePicker_6: {},
+  Slider_3: { alignSelf: "flex-start", borderColor: "#002aff" },
+  Slider_4: {},
+  Slider_5: {},
+  CheckBox_14: { borderColor: "#9cc01b", borderStyle: "dotted" },
   Icon_10: {},
   Icon_12: {}
 })
