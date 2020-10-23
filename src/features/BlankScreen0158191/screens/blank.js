@@ -26,9 +26,13 @@ export default class Blank extends React.Component {
   state = { DateTimePicker_6: new Date(""), CheckBox_14: false }
 
   render = () => (
-    <View>
+    <ImageBackground
+      source={{
+        uri:
+          "https://d3tklmlrp1a8c2.cloudfront.net/media/project_component_resources/9c990746c523247d92fd3d09bedbf37b.png"
+      }}
+    >
       <DateTimePicker
-        showIcon={false}
         date={this.state.DateTimePicker_6}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_6: selectedDate })
@@ -47,6 +51,7 @@ export default class Blank extends React.Component {
       >
         <CheckBox
           title="self harm "
+          containerStyle={styles.CheckBox_14}
           checked={this.state.CheckBox_14}
           onPress={nextChecked => this.setState({ CheckBox_14: nextChecked })}
         />
@@ -55,7 +60,7 @@ export default class Blank extends React.Component {
         <Icon name="star" />
       </TouchableOpacity>
       <Icon name="star" />
-    </View>
+    </ImageBackground>
   )
 }
 
@@ -85,6 +90,14 @@ const styles = StyleSheet.create({
   Slider_4: {},
   Slider_5: {},
   CheckBox_14: {},
+  Icon_10: {},
+  Icon_12: {},
+  ImageBackground_1: {},
+  DateTimePicker_6: {},
+  Slider_3: { alignSelf: "flex-start", borderColor: "#002aff" },
+  Slider_4: {},
+  Slider_5: {},
+  CheckBox_14: { borderColor: "#9cc01b" },
   Icon_10: {},
   Icon_12: {}
 })
