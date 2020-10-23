@@ -26,7 +26,12 @@ export default class Blank extends React.Component {
   state = { DateTimePicker_6: new Date(""), CheckBox_14: false }
 
   render = () => (
-    <ImageBackground>
+    <ImageBackground
+      source={{
+        uri:
+          "https://d3tklmlrp1a8c2.cloudfront.net/media/project_component_resources/light_house_back.jpg"
+      }}
+    >
       <DateTimePicker
         showIcon={false}
         date={this.state.DateTimePicker_6}
@@ -52,14 +57,10 @@ export default class Blank extends React.Component {
           onPress={nextChecked => this.setState({ CheckBox_14: nextChecked })}
         />
       </TouchableOpacity>
-      <Button title="goal setting" onPress={() => alert("Pressed!")} />
-      <Button title="copying mechanisms" onPress={() => alert("Pressed!")} />
-      <Button
-        title="coping stuff"
-        color="#3366FF"
-        style={styles.Button_17}
-        onPress={() => alert("Pressed!")}
-      />
+      <TouchableOpacity onPress={() => this.props.navigation.navigate("")}>
+        <Icon name="star" />
+      </TouchableOpacity>
+      <Icon name="star" />
     </ImageBackground>
   )
 }
@@ -116,5 +117,13 @@ const styles = StyleSheet.create({
   CheckBox_14: { borderColor: "#9cc01b", borderStyle: "dotted" },
   Button_15: {},
   Button_16: {},
-  Button_17: { width: "100%", textAlign: "center" }
+  Button_17: { width: "100%", textAlign: "center" },
+  ImageBackground_1: {},
+  DateTimePicker_6: {},
+  Slider_3: { alignSelf: "flex-start", borderColor: "#002aff" },
+  Slider_4: {},
+  Slider_5: {},
+  CheckBox_14: { borderColor: "#9cc01b", borderStyle: "dotted" },
+  Icon_10: {},
+  Icon_12: {}
 })
