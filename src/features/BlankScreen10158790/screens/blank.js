@@ -26,15 +26,9 @@ export default class Blank extends React.Component {
   state = {}
 
   render = () => (
-    <ImageBackground
-      source={{
-        uri:
-          "https://d3tklmlrp1a8c2.cloudfront.net/media/project_component_resources/e72ce29bc3f6b207cdbdc74b8690ffee.jpg"
-      }}
-      style={styles.ImageBackground_1}
-    >
-      <Text>goal setting and time management</Text>
-      <Text>
+    <ImageBackground style={styles.ImageBackground_1}>
+      <Text style={styles.Text_2}>goal setting and time management</Text>
+      <Text style={styles.Text_3}>
         Clarify values: Relax and contemplate; years from now, you are in your
         favorite place, you lived a full and happy life, looking back what are
         you most proud of accomplishing? What are you most grateful for? what is
@@ -53,9 +47,13 @@ export default class Blank extends React.Component {
     </ImageBackground>
   )
 }
+
 const styles = StyleSheet.create({
   container: { flex: 1, marginHorizontal: 16 },
   ImageBackground_1: { color: "#ffffff" },
   Text_2: {},
-  Text_3: {}
+  Text_3: {},
+  ImageBackground_1: { color: "#ffffff" },
+  Text_2: { color: "#ffffff" },
+  Text_3: { color: "#ffffff" }
 })
