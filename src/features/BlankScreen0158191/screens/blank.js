@@ -23,19 +23,34 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { DateTimePicker_6: new Date("") }
+  state = { DateTimePicker_6: new Date(""), CheckBox_14: false }
 
   render = () => (
     <View>
       <DateTimePicker
+        showIcon={false}
         date={this.state.DateTimePicker_6}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_6: selectedDate })
         }
       />
+      <Slider
+        value={50}
+        minimumValue={0}
+        maximumValue={100}
+        style={styles.Slider_3}
+      />
       <Slider value={50} minimumValue={0} maximumValue={100} />
       <Slider value={50} minimumValue={0} maximumValue={100} />
-      <Slider value={50} minimumValue={0} maximumValue={100} />
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("BlankScreen2158265")}
+      >
+        <CheckBox
+          title="self harm "
+          checked={this.state.CheckBox_14}
+          onPress={nextChecked => this.setState({ CheckBox_14: nextChecked })}
+        />
+      </TouchableOpacity>
       <TouchableOpacity onPress={() => this.props.navigation.navigate("")}>
         <Icon name="star" />
       </TouchableOpacity>
@@ -62,6 +77,14 @@ const styles = StyleSheet.create({
   Slider_3: {},
   Slider_4: {},
   Slider_5: {},
+  Icon_10: {},
+  Icon_12: {},
+  View_1: {},
+  DateTimePicker_6: {},
+  Slider_3: { alignSelf: "flex-start", borderColor: "#002aff" },
+  Slider_4: {},
+  Slider_5: {},
+  CheckBox_14: {},
   Icon_10: {},
   Icon_12: {}
 })
